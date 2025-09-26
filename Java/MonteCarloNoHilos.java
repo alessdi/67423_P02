@@ -22,3 +22,6 @@ public class MonteCarloNoHilos {
         System.out.println("Error: " + Math.abs(piApprox - Math.PI));
     }
 }
+
+
+// Alessandro Novelo 67423
