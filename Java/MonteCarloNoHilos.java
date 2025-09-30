@@ -2,11 +2,12 @@ import java.util.Random;
 
 public class MonteCarloNoHilos {
 
-    private static void main (String[] args) {
-        int totalSamples = 1_000_000;
-        long insideCircle = 0;
+    public  static void main (String[] args) {
+        int totalSamples = 1_000_000; //numero total de puntos
+        long insideCircle = 0; //contador total
         Random rand = new Random();
 
+  
         for(int i = 0; i < totalSamples; i++) {
             double x = rand.nextDouble();
             double y = rand.nextDouble();
@@ -15,6 +16,7 @@ public class MonteCarloNoHilos {
             }
         }
 
+      
         double piApprox = (4.0 * insideCircle) / totalSamples;
         System.out.println("Numero total de puntos: " + totalSamples);
         System.out.println("Puntos dentro de circulo: " + insideCircle);
@@ -22,6 +24,4 @@ public class MonteCarloNoHilos {
         System.out.println("Error: " + Math.abs(piApprox - Math.PI));
     }
 }
-
-
 // Alessandro Novelo 67423
